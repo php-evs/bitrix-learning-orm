@@ -1,8 +1,16 @@
 <?php
 namespace Learning;
-
 use Bitrix\Main\Entity;
 
+/**
+ *
+ * \Learning\AttemptTable::getEntity()->compileDbTableStructureDump()
+ * \Learning\AttemptTable::getEntity()->getFields()
+ *
+ * Class AttemptTable
+ * @package Learning
+ *
+ */
 class AttemptTable extends Entity\DataManager
 {
     /**
@@ -73,9 +81,6 @@ class AttemptTable extends Entity\DataManager
                 //'DATEDIFF(%s, %s)', array('DATE_END', 'DATE_START')
             //)
         );
-
-        // Для проверки \Learning\AttemptTable::getEntity()->compileDbTableStructureDump()
-        //              \Learning\AttemptTable::getEntity()->getFields()
     }
 
     public static function validateStatus()
