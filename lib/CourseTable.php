@@ -70,6 +70,12 @@ class CourseTable extends Entity\DataManager
                 array('=this.LINKED_LESSON_ID' => 'ref.ID'),
                 array('join_type' => 'LEFT')
             ),
+            'SITE' => new Entity\ReferenceField(
+                'SITE',
+                '\Learning\CourseSiteTable',
+                array('=this.ID' => 'ref.COURSE_ID'),
+                array('join_type' => 'LEFT')
+            ),
         );
     }
 }
