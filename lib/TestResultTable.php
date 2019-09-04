@@ -31,9 +31,21 @@ class TestResultTable extends Entity\DataManager
                 'data_type' => 'integer',
                 'required' => true,
             ),
+            'ATTEMPT' => new Entity\ReferenceField(
+                'ATTEMPT',
+                '\Learning\AttemptTable',
+                array('=this.ATTEMPT_ID' => 'ref.ID'),
+                array('join_type' => 'LEFT')
+            ),
             'QUESTION_ID' => array(
                 'data_type' => 'integer',
                 'required' => true,
+            ),
+            'QUESTION' => new Entity\ReferenceField(
+                'QUESTION',
+                '\Learning\QuestionTable',
+                array('=this.QUESTION_ID' => 'ref.ID'),
+                array('join_type' => 'LEFT')
             ),
             'RESPONSE' => array(
                 'data_type' => 'text',
