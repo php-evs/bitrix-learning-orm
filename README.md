@@ -5,7 +5,8 @@ namespace Learning;
 
 # Examples
 
-## Get all Lessons from specific Site sorted by Course active date, Lesson active date
+## 1
+Get all Lessons from specific Site sorted by Course active date, Lesson active date
 ```
 \Learning\LessonTable::getList([
   'order' => ['COURSE.ACTIVE_FROM' => 'ASC', 'ACTIVE_FROM' => 'ASC'],
