@@ -23,5 +23,5 @@ Get all Lessons from specific Site sorted by Course active date, Lesson active d
     'SORT',
     'CREATED_BY'
   ]
-]);
+])->fetchAll();
 ```
