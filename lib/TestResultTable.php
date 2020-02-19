@@ -13,12 +13,13 @@ class TestResultTable extends Entity\DataManager
     {
         return 'b_learn_test_result';
     }
-
-    /**
-     * Returns entity map definition.
-     *
-     * @return array
-     */
+	
+	/**
+	 * Returns entity map definition.
+	 *
+	 * @return array
+	 * @throws \Bitrix\Main\ArgumentException
+	 */
     public static function getMap()
     {
         return array(
