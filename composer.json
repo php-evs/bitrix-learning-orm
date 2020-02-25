@@ -1,0 +1,24 @@
+{
+  "name": "elenasimchenko/bitrix-learning-orm",
+  "description": "Библиотека предоставляет инструменты для работы с таблицами модуля обучения через ORM d7",
+  "keywords": ["bitrix", "битрикс", "orm", "d7", "learning"],
+  "license": "MIT",
+  "version": "0.1",
+  "support": {
+    "source": "https://github.com/elenasimchenko/bitrix-learning-orm"
+  },
+  "authors": [
+    {
+      "name": "Elena Simchenko",
+      "email": "m.zhurov@maximaster.ru"
+    }
+  ],
+  "require": {
+    "php": ">=7.3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Learning\\": "lib/"
+    }
+  }
+}
