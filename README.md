@@ -1,14 +1,13 @@
 # bitrix-learning-orm
-ORM for bitrix learning module
+ORM for bitrix learning module.
 
-namespace Learning;
+namespace \ES\Learning
 
 # Examples
 
-## 1
-Get all Lessons from specific Site sorted by Course active date, Lesson active date
+## 1 Get all Lessons from specific Site sorted by Course active date, Lesson active date
 ```php
-\Learning\LessonTable::getList([
+\ES\Learning\LessonTable::getList([
   'order' => ['COURSE.ACTIVE_FROM' => 'ASC', 'ACTIVE_FROM' => 'ASC'],
   'filter' => [
     'ACTIVE' => 'Y',

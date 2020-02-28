@@ -1,10 +1,10 @@
 <?php
-namespace Learning;
+namespace ES\Learning;
 use Bitrix\Main\Entity;
 
 /**
  * Class CourseTable
- * @package Learning
+ * @package ES\Learning
  */
 class LessonEdgesTable extends Entity\DataManager
 {
@@ -32,13 +32,13 @@ class LessonEdgesTable extends Entity\DataManager
             new Entity\IntegerField('SOURCE_NODE', ['primary' => true]),
             new Entity\ReferenceField(
                 'SOURCE',
-                '\Learning\LessonTable',
+                '\ES\Learning\LessonTable',
                 array('=this.SOURCE_NODE' => 'ref.ID')
             ),
             new Entity\IntegerField('TARGET_NODE', ['primary' => true]),
             new Entity\ReferenceField(
                 'TARGET',
-                '\Learning\LessonTable',
+                '\ES\Learning\LessonTable',
                 array('=this.TARGET_NODE' => 'ref.ID')
             )
         );

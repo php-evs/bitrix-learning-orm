@@ -7,3 +7,7 @@
 ## 0.3 - 2020-02-25
 
 * composer.json
+
+## 0.4 - 2020-02-28
+
+* Добавлен класс CertificationTable

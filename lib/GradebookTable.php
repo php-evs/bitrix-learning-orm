@@ -1,5 +1,5 @@
 <?php 
-namespace Learning;
+namespace ES\Learning;
 use Bitrix\Main\Entity;
 
 class GradebookTable extends Entity\DataManager
@@ -50,7 +50,7 @@ class GradebookTable extends Entity\DataManager
             )),
             new Entity\ReferenceField(
                 'TEST',
-                '\Learning\TestTable',
+                '\ES\Learning\TestTable',
                 array('=this.TEST_ID' => 'ref.ID'),
                 array('join_type' => 'LEFT')
             ),

@@ -1,5 +1,5 @@
 <?php
-namespace Learning;
+namespace ES\Learning;
 use Bitrix\Main\Entity;
 
 class AnswerTable extends Entity\DataManager
@@ -32,7 +32,7 @@ class AnswerTable extends Entity\DataManager
             )),
             new Entity\ReferenceField(
                 'QUESTION',
-                '\Learning\QuestionTable',
+                '\ES\Learning\QuestionTable',
                 array('=this.QUESTION_ID' => 'ref.ID'),
                 array('join_type' => 'LEFT')
             ),

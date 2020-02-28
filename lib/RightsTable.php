@@ -1,5 +1,5 @@
 <?php
-namespace Learning;
+namespace ES\Learning;
 use Bitrix\Main\Entity;
 
 /**
@@ -12,7 +12,7 @@ use Bitrix\Main\Entity;
  * <li> TASK_ID int mandatory
  * </ul>
  *
- * @package Learning
+ * @package ES\Learning
  **/
 
 class RightsTable extends Entity\DataManager
@@ -41,7 +41,7 @@ class RightsTable extends Entity\DataManager
             )),
             'LESSON' => new Entity\ReferenceField(
                 'LESSON',
-                '\Learning\LessonTable',
+                '\ES\Learning\LessonTable',
                 array('=this.LESSON_ID' => 'ref.ID'),
                 array('join_type' => 'LEFT')
             ),

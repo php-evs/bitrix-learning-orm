@@ -1,14 +1,14 @@
 <?php
-namespace Learning;
+namespace ES\Learning;
 use Bitrix\Main\Entity;
 
 /**
  *
- * \Learning\AttemptTable::getEntity()->compileDbTableStructureDump()
- * \Learning\AttemptTable::getEntity()->getFields()
+ * \ES\Learning\AttemptTable::getEntity()->compileDbTableStructureDump()
+ * \ES\Learning\AttemptTable::getEntity()->getFields()
  *
  * Class AttemptTable
- * @package Learning
+ * @package ES\Learning
  *
  */
 class AttemptTable extends Entity\DataManager
@@ -32,12 +32,13 @@ class AttemptTable extends Entity\DataManager
     {
         return 'LEARN_ATTEMPT';
     }
-
-    /**
-     * Returns entity map definition.
-     *
-     * @return array
-     */
+	
+	/**
+	 * Returns entity map definition.
+	 *
+	 * @return array
+	 * @throws \Bitrix\Main\ArgumentException
+	 */
     public static function getMap()
     {
         return array(
@@ -50,7 +51,7 @@ class AttemptTable extends Entity\DataManager
             )),
             new Entity\ReferenceField(
                 'TEST',
-                '\Learning\TestTable',
+                '\ES\Learning\TestTable',
                 array('=this.TEST_ID' => 'ref.ID'),
                 array('join_type' => 'LEFT')
             ),

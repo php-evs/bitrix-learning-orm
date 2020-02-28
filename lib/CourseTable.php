@@ -1,14 +1,14 @@
 <?php
-namespace Learning;
+namespace ES\Learning;
 use Bitrix\Main\Entity;
 
 /**
  *
- * \Learning\CourseTable::getEntity()->compileDbTableStructureDump()
- * \Learning\CourseTable::getEntity()->getFields()
+ * \ES\Learning\CourseTable::getEntity()->compileDbTableStructureDump()
+ * \ES\Learning\CourseTable::getEntity()->getFields()
  *
  * Class CourseTable
- * @package Learning
+ * @package ES\Learning
  *
  */
 class CourseTable extends Entity\DataManager
@@ -66,13 +66,13 @@ class CourseTable extends Entity\DataManager
             'JOURNAL_STATUS' => new Entity\IntegerField('JOURNAL_STATUS'),
             'LINKED_LESSON' => new Entity\ReferenceField(
                 'LINKED_LESSON',
-                '\Learning\LessonTable',
+                '\ES\Learning\LessonTable',
                 array('=this.LINKED_LESSON_ID' => 'ref.ID'),
                 array('join_type' => 'LEFT')
             ),
             'SITE' => new Entity\ReferenceField(
                 'SITE',
-                '\Learning\CourseSiteTable',
+                '\ES\Learning\CourseSiteTable',
                 array('=this.ID' => 'ref.COURSE_ID'),
                 array('join_type' => 'LEFT')
             ),
