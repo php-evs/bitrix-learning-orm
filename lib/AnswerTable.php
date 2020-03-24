@@ -23,29 +23,29 @@ class AnswerTable extends Entity\DataManager
     public static function getMap()
     {
         return array(
-            new Entity\IntegerField('ID', array(
+            'ID' => new Entity\IntegerField('ID', array(
                 'primary' => true,
                 'autocomplete' => true
             )),
-            new Entity\IntegerField('QUESTION_ID', array(
+            'QUESTION_ID' => new Entity\IntegerField('QUESTION_ID', array(
                 'required' => true
             )),
-            new Entity\ReferenceField(
+            'QUESTION' => new Entity\ReferenceField(
                 'QUESTION',
                 '\ES\Learning\QuestionTable',
                 array('=this.QUESTION_ID' => 'ref.ID'),
                 array('join_type' => 'LEFT')
             ),
-            new Entity\IntegerField('SORT'),
-            new Entity\TextField('ANSWER', array(
+            'SORT' => new Entity\IntegerField('SORT'),
+            'ANSWER' => new Entity\TextField('ANSWER', array(
                 'required' => true
             )),
-            new Entity\StringField('CORRECT', array(
+            'CORRECT' => new Entity\StringField('CORRECT', array(
                 'required' => true,
                 'validation' => array(__CLASS__, 'validateCorrect'),
             )),
-            new Entity\TextField('FEEDBACK'),
-            new Entity\TextField('MATCH_ANSWER')
+            'FEEDBACK' => new Entity\TextField('FEEDBACK'),
+            'MATCH_ANSWER' => new Entity\TextField('MATCH_ANSWER')
         );
     }
     /**
