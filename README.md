@@ -4,7 +4,7 @@ ORM for bitrix learning module.
 ## Requirements
 
 * PHP >= 7.1.0
-* Bitrix CMS >= 18.0
+* Bitrix CMS >= 15.0
 
 namespace \ES\Learning
 
