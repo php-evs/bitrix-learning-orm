@@ -24,7 +24,7 @@ in "repositories" section
 
 # Use Examples
 
-## 1 Get all Lessons from specific Site sorted by Course active date, Lesson active date
+## Get all Lessons from specific Site sorted by Course active date, Lesson active date
 ```php
 \ES\Learning\LessonTable::getList([
   'order' => ['COURSE.ACTIVE_FROM' => 'ASC', 'ACTIVE_FROM' => 'ASC'],
