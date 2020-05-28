@@ -97,9 +97,6 @@ class TestTable extends Entity\DataManager
             new Entity\IntegerField('FINAL_INDICATION', array(
                 'required' => true
             )),
-            new Entity\IntegerField('FINAL_INDICATION', array(
-                'required' => true
-            )),
             new Entity\IntegerField('MIN_TIME_BETWEEN_ATTEMPTS', array(
                 'required' => true
             )),
